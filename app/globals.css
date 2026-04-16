@@ -1,0 +1,265 @@
+/* Studio hub + shared chrome (CareNote marketing tokens live in styles/carenote-marketing.css) */
+
+.hub-skin {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(102, 200, 241, 0.32), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(31, 139, 83, 0.16), transparent 30%),
+    radial-gradient(circle at 72% 88%, rgba(242, 90, 98, 0.08), transparent 32%),
+    linear-gradient(180deg, #f7fbff 0%, #eef4fb 52%, #e8f0fb 100%);
+}
+
+.hub-eyebrow::before {
+  background: var(--blue, #1b83d4) !important;
+}
+
+.fe-eyebrow-hub {
+  background: rgba(31, 139, 83, 0.18) !important;
+  color: #022c1a !important;
+  border: 1px solid rgba(20, 98, 59, 0.45);
+}
+
+.fe-eyebrow-hub::before {
+  background: #d4af37 !important;
+  box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.12);
+}
+
+.app-tile--carenote {
+  border-left: 4px solid #f25a62;
+  box-shadow:
+    0 24px 70px rgba(19, 56, 84, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.65) inset;
+}
+
+.app-tile--football {
+  border: 1px solid #3d5588;
+  border-left: 4px solid #2bbf75;
+  background: linear-gradient(165deg, #141f38 0%, #0c1424 100%);
+  color: #d8e4f4;
+  box-shadow: 0 26px 80px rgba(7, 11, 20, 0.35);
+}
+
+.app-tile--football h2 {
+  color: #f7f9ff;
+}
+
+.app-tile--football p {
+  color: #d8e4f4;
+}
+
+.hub-mini-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.hub-mini-list li {
+  margin: 6px 0;
+}
+
+.hub-mini-list li::marker {
+  color: #1b83d4;
+}
+
+.hub-fe-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #35507d;
+  background: #35507d;
+  margin-top: 4px;
+}
+
+.hub-fe-strip__cell {
+  background: #121f3a;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.hub-fe-strip__label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b8cce8;
+}
+
+.hub-fe-strip__value {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-sora), "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f1f6ff;
+}
+
+.hub-fe-primary {
+  background: linear-gradient(135deg, #1f8b53 0%, #14623b 100%) !important;
+  border: 1px solid rgba(67, 182, 120, 0.65) !important;
+  color: #f5f8ff !important;
+  box-shadow: 0 16px 28px rgba(31, 139, 83, 0.28);
+}
+
+.hub-fe-secondary {
+  background: rgba(42, 58, 88, 0.95) !important;
+  border: 1px solid rgba(65, 86, 122, 0.95) !important;
+  color: #f5f8ff !important;
+}
+
+.studio-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: rgba(248, 253, 255, 0.82);
+  border-bottom: 1px solid rgba(17, 40, 61, 0.08);
+}
+
+.studio-header-inner {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 72px;
+  flex-wrap: wrap;
+}
+
+.studio-brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  font-family: var(--font-sora), "Trebuchet MS", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.studio-brand strong {
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.studio-brand span {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.studio-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.studio-nav a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: 0.94rem;
+  transition: 180ms ease;
+}
+
+.studio-nav a:hover {
+  background: rgba(27, 131, 212, 0.1);
+  color: var(--blue-deep);
+}
+
+.hub-main {
+  padding: 48px 0 80px;
+}
+
+.hub-hero {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto 32px;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hub-hero h1 {
+  margin: 14px 0 12px;
+}
+
+.hub-hero p {
+  margin: 0;
+  max-width: 62ch;
+  color: #2f4a5e;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hub-skin .hub-hero h1 {
+  color: #0f2233;
+}
+
+.hub-skin .app-tile--carenote p,
+.hub-skin .app-tile--carenote .hub-mini-list {
+  color: #2f4a5e;
+}
+
+.app-showcase {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 860px) {
+  .app-showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app-tile {
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.app-tile h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+.app-tile p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.app-tile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.football-page .hero-panel {
+  margin-bottom: 0;
+}
+
+.football-placeholder {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px dashed rgba(17, 40, 61, 0.2);
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
