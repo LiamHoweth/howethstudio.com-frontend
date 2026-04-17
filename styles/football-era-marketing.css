@@ -276,6 +276,24 @@ html.fe-active .studio-nav a:hover {
   margin: 0;
 }
 
+.fe-page-root .fe-footnote-links {
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 0.92rem;
+}
+
+.fe-page-root .fe-footnote-links a {
+  color: #dff6ea;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(120, 220, 170, 0.55);
+  text-underline-offset: 3px;
+}
+
+.fe-page-root .fe-footnote-links a:hover {
+  color: #ffffff;
+}
+
 .fe-page-root .fe-broadcast-bar {
   margin-top: 28px;
   border-left: 4px solid rgba(230, 200, 90, 0.85);
@@ -326,5 +344,41 @@ html.fe-active .studio-nav a:hover {
 
 .fe-page-root .section-card .check-list,
 .fe-page-root .section-card li {
+  color: var(--fe-ink-soft);
+}
+
+.fe-page-root .fe-asc-block {
+  margin: 0 0 10px;
+  padding: 18px 20px;
+  border-radius: var(--fe-radius-md);
+  border: 1px solid var(--fe-line);
+  background: rgba(7, 11, 20, 0.55);
+  color: #e8eef8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.fe-page-root .fe-copy-limit {
+  font-weight: 600;
+  color: var(--fe-ink-muted);
+  font-size: 0.85em;
+}
+
+.fe-page-root .fe-copy-hint {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--fe-ink-muted);
+  line-height: 1.5;
+}
+
+.fe-page-root .faq-card[open] summary {
+  background: rgba(31, 139, 83, 0.12);
+}
+
+.fe-page-root .faq-answer {
   color: var(--fe-ink-soft);
 }

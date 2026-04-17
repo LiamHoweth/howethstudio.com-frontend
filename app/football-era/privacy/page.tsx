@@ -1,0 +1,141 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { StudioSiteHeader } from "@/components/studio/StudioSiteHeader";
+import { footballEraConfig } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Football Era Privacy Policy",
+  description:
+    "How Football Era handles information on your iPhone—local career data, optional Apple platform services, and how to contact Howeth Studio.",
+  alternates: {
+    canonical: "/football-era/privacy",
+  },
+};
+
+export default function FootballEraPrivacyPage() {
+  return (
+    <>
+      <StudioSiteHeader />
+      <main className="page-main">
+        <div className="site-shell">
+          <section className="hero-panel">
+            <span className="eyebrow">Privacy Policy</span>
+            <h1>Football Era Privacy Policy</h1>
+            <p className="hero-copy">
+              Effective date: April 16, 2026. This policy describes how Football Era
+              (“the app”), published by Howeth Studio, treats information on your
+              device when you play.
+            </p>
+          </section>
+
+          <section className="section two-column">
+            <article className="section-card">
+              <h2>What stays on your iPhone</h2>
+              <p>
+                Career progress, slot saves, preferences, and other gameplay state
+                needed to run Football Era are stored locally on your device. Howeth
+                Studio does not operate a sign-in or cloud save service for core
+                gameplay as part of this policy unless a future version explicitly
+                tells you otherwise in the app and updates this page.
+              </p>
+            </article>
+            <article className="section-card">
+              <h2>When information is processed off-device</h2>
+              <p>
+                Like other iPhone apps, Football Era relies on Apple platform services
+                for distribution, updates, and device-level features (for example
+                system keyboards or accessibility). Those flows are governed by
+                Apple’s policies. If you purchase or restore in-app content, Apple
+                handles payment and receipt validation.
+              </p>
+            </article>
+          </section>
+
+          <section className="section two-column">
+            <article className="section-card">
+              <h2>Analytics and diagnostics</h2>
+              <p>
+                The app is not built around ad tracking or behavioral advertising. If
+                Apple provides optional crash or diagnostic sharing on your device,
+                whether any data is sent depends on your iOS privacy settings and
+                choices in the Privacy and Security section of Settings.
+              </p>
+            </article>
+            <article className="section-card">
+              <h2>What we do not do by design</h2>
+              <ul className="check-list">
+                <li>We do not sell your personal information.</li>
+                <li>
+                  We do not require you to create a Football Era account for the
+                  experiences described here.
+                </li>
+                <li>
+                  We do not use your saved careers to train third-party generative
+                  models.
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section className="section two-column">
+            <article className="section-card">
+              <h2>Children and families</h2>
+              <p>
+                Football Era is a game for a general audience. Parents and guardians
+                should use Apple’s Screen Time and Family Sharing controls if they want
+                to manage downloads, purchases, or play time for minors.
+              </p>
+            </article>
+            <article className="section-card">
+              <h2>Changes to this policy</h2>
+              <p>
+                We may update this policy when the app or legal requirements change.
+                The effective date at the top will change when we publish a revision.
+                Continued use of the app after an update means you accept the revised
+                policy.
+              </p>
+            </article>
+          </section>
+
+          <section className="section two-column">
+            <article className="section-card">
+              <h2>Your choices</h2>
+              <ul className="check-list">
+                <li>
+                  Deleting the app from your iPhone removes local app data from that
+                  device, subject to how iOS handles backups.
+                </li>
+                <li>
+                  You can control optional Apple analytics and sharing in iOS
+                  Settings.
+                </li>
+              </ul>
+            </article>
+            <article className="section-card">
+              <h2>Contact</h2>
+              <p>
+                Questions about this policy can be sent to{" "}
+                <a href={`mailto:${footballEraConfig.supportEmail}`}>
+                  {footballEraConfig.supportEmail}
+                </a>
+                .
+              </p>
+            </article>
+          </section>
+
+          <section className="section section-card">
+            <h2>Related links</h2>
+            <div className="hero-actions">
+              <Link className="button button-primary" href="/football-era/support">
+                Support
+              </Link>
+              <Link className="button button-secondary" href="/football-era">
+                Football Era home
+              </Link>
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+  );
+}

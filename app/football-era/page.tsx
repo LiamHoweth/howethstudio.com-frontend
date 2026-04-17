@@ -273,6 +273,13 @@ export default function FootballEraPage() {
                   See CareNote CNA
                 </Link>
               </div>
+              <p className="hero-copy fe-footnote-links">
+                <Link href="/football-era/privacy">Privacy</Link>
+                <span aria-hidden="true"> · </span>
+                <Link href="/football-era/support">Support</Link>
+                <span aria-hidden="true"> · </span>
+                <Link href="/football-era/app-store">App Store copy</Link>
+              </p>
             </article>
           </section>
         </div>

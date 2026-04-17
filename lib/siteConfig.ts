@@ -21,6 +21,10 @@ export const careNoteConfig = {
 
 export const footballEraConfig = {
   siteName: "Football Era",
+  supportEmail:
+    cleanUrl(process.env.NEXT_PUBLIC_FOOTBALL_ERA_SUPPORT_EMAIL) ||
+    cleanUrl(process.env.NEXT_PUBLIC_CARENOTE_SUPPORT_EMAIL) ||
+    "carenotecna@gmail.com",
   appStoreUrl: cleanUrl(process.env.NEXT_PUBLIC_FOOTBALL_ERA_APP_STORE_URL),
   testFlightUrl: cleanUrl(process.env.NEXT_PUBLIC_FOOTBALL_ERA_TESTFLIGHT_URL),
 };
