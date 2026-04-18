@@ -6,52 +6,42 @@ import { usePathname } from "next/navigation";
 import { careNoteConfig } from "@/lib/siteConfig";
 
 const navPages = [
-  { href: "/carenote-cna", label: "Home" },
-  { href: "/carenote-cna/features", label: "Features" },
-  { href: "/carenote-cna/how-it-works", label: "How It Works" },
-  { href: "/carenote-cna/support", label: "Support" },
+  { href: "/carenote-cna/", label: "Home" },
+  { href: "/carenote-cna/features/", label: "Features" },
+  { href: "/carenote-cna/how-it-works/", label: "How It Works" },
+  { href: "/carenote-cna/support/", label: "Support" },
 ] as const;
 
+function stripTrailingSlash(path: string) {
+  return path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+}
+
 function isActive(pathname: string, href: string) {
-  if (href === "/carenote-cna") {
-    return pathname === "/carenote-cna";
+  const p = stripTrailingSlash(pathname);
+  const h = stripTrailingSlash(href);
+  if (h === "/carenote-cna") {
+    return p === "/carenote-cna";
   }
-  return pathname === href || pathname.startsWith(`${href}/`);
+  return p === h || p.startsWith(`${h}/`);
 }
 
 export function CareNoteSiteHeader() {
   const pathname = usePathname() || "";
   const appStoreUrl = careNoteConfig.appStoreUrl;
-  const downloadHref = appStoreUrl || "/carenote-cna/download";
+  const downloadHref = appStoreUrl || "/carenote-cna/download/";
   const ctaClass =
     "button button-primary header-cta" + (appStoreUrl ? "" : " is-disabled");
 
   return (
     <header className="site-header">
       <div className="site-shell header-inner">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "16px",
-            flexWrap: "wrap",
-            minWidth: 0,
-          }}
-        >
-          <Link
-            href="/"
-            style={{
-              fontWeight: 800,
-              fontSize: "0.88rem",
-              color: "var(--ink-soft)",
-              flex: "0 0 auto",
-            }}
-          >
+        <div className="carenote-header-brandrow">
+          <Link href="/" className="carenote-backlink">
             ← Howeth Studio
           </Link>
           <Link
             className="brand-lockup"
-            href="/carenote-cna"
+            href="/carenote-cna/"
             aria-label={`${careNoteConfig.siteName} home`}
           >
             <Image

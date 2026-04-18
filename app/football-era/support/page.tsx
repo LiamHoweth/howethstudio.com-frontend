@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Get help with Football Era on iPhone—career slots, seasons, saves, troubleshooting, and how to reach Howeth Studio support.",
   alternates: {
-    canonical: "/football-era/support",
+    canonical: "/football-era/support/",
   },
 };
 
@@ -112,13 +112,13 @@ export default function FootballEraSupportPage() {
               text. Use the pages below as stable links for reviewers and players.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/football-era/privacy">
+              <Link className="button button-primary" href="/football-era/privacy/">
                 Privacy Policy
               </Link>
-              <Link className="button button-secondary" href="/football-era/app-store">
+              <Link className="button button-secondary" href="/football-era/app-store/">
                 App Store marketing copy
               </Link>
-              <Link className="button button-ghost" href="/football-era">
+              <Link className="button button-ghost" href="/football-era/">
                 Football Era home
               </Link>
             </div>

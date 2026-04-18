@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Explore CareNote CNA features including structured charting, optional voice capture, smart note assistance, and a caregiver-first review workflow.",
   alternates: {
-    canonical: "/carenote-cna/features",
+    canonical: "/carenote-cna/features/",
   },
 };
 

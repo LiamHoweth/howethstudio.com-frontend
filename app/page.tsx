@@ -1,86 +1,76 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { StudioClock } from "@/components/studio/StudioClock";
+import {
+  StudioAboutSection,
+  StudioSiteFooter,
+  StudioWorkSection,
+} from "@/components/studio/StudioMarketing";
 import { StudioSiteHeader } from "@/components/studio/StudioSiteHeader";
 
 export const metadata: Metadata = {
   title: "Howeth Studio",
   description:
-    "Independent iPhone apps from Howeth Studio, including CareNote CNA and Football Era.",
+    "Independent software studio: product engineering, APIs and clients, and polished mobile experiences — CareNote CNA, Football Era, and selective new work.",
   alternates: {
     canonical: "/",
   },
 };
 
 export default function HomePage() {
+  const year = new Date().getFullYear();
+
   return (
-    <div className="hub-skin">
+    <div className="studio-landing">
+      <a className="studio-skip" href="#main">
+        Skip to main content
+      </a>
       <StudioSiteHeader />
-      <main className="hub-main">
-        <section className="hub-hero">
-          <span className="eyebrow hub-eyebrow">Howeth Studio</span>
-          <h1>Focused apps for real workflows.</h1>
-          <p>
-            Howeth Studio ships practical iPhone software. The hub borrows CareNote
-            CNA’s airy marketing rhythm and Football Era’s broadcast depth—shared
-            typography and shells, with each app tile carrying its own palette.
-          </p>
+      <main id="main" className="studio-landing__main">
+        <section className="studio-hero" aria-labelledby="studio-hero-title">
+          <div className="studio-hero__rail">
+            <span className="studio-mono studio-hero__index" aria-hidden="true">
+              001
+            </span>
+            <p className="studio-mono studio-hero__hash"># SoftwareStudio</p>
+          </div>
+
+          <div className="studio-hero__body">
+            <h1 id="studio-hero-title" className="studio-hero__title">
+              <span className="studio-hero__title-line studio-hero__title-line--a">
+                Software
+              </span>
+              <span className="studio-hero__title-line studio-hero__title-line--b">
+                Development
+              </span>
+            </h1>
+            <p className="studio-mono studio-hero__folio">
+              Studio portfolio — {year}
+            </p>
+            <p className="studio-hero__lede">
+              Howeth Studio designs and ships end-to-end software: disciplined product work,
+              thoughtful UX, and maintainable code — from native mobile to the services and
+              data models behind them.
+            </p>
+          </div>
+
+          <div className="studio-hero__meta studio-mono">
+            <StudioClock />
+            <span className="studio-hero__coords" aria-label="Practice location">
+              Remote-first · US
+            </span>
+            <span className="studio-hero__status">Available for selective projects</span>
+          </div>
         </section>
 
-        <section className="app-showcase" aria-label="Apps">
-          <article className="app-tile app-tile--carenote">
-            <span className="eyebrow">Caregiving</span>
-            <h2>CareNote CNA</h2>
-            <p>
-              Faster shift notes for CNAs on iPhone with structured charting,
-              optional voice capture, and review before save.
-            </p>
-            <ul className="hub-mini-list">
-              <li>Structured charting first</li>
-              <li>Optional voice capture</li>
-              <li>Review before save</li>
-            </ul>
-            <div className="app-tile-actions">
-              <Link className="button button-primary" href="/carenote-cna">
-                View app site
-              </Link>
-              <Link className="button button-secondary" href="/carenote-cna/download">
-                Download
-              </Link>
-            </div>
-          </article>
+        <div id="work">
+          <StudioWorkSection />
+        </div>
 
-          <article className="app-tile app-tile--football">
-            <span className="eyebrow fe-eyebrow-hub">Football Era</span>
-            <h2>Career sim on your phone</h2>
-            <p>
-              Become the greatest football player ever—career slots, season weeks,
-              and broadcast-style beats inspired by the in-game welcome and tab
-              rhythm.
-            </p>
-            <div className="hub-fe-strip" aria-hidden="true">
-              <div className="hub-fe-strip__cell">
-                <span className="hub-fe-strip__label">Slots</span>
-                <span className="hub-fe-strip__value">3</span>
-              </div>
-              <div className="hub-fe-strip__cell">
-                <span className="hub-fe-strip__label">Tone</span>
-                <span className="hub-fe-strip__value">Dark</span>
-              </div>
-              <div className="hub-fe-strip__cell">
-                <span className="hub-fe-strip__label">Accent</span>
-                <span className="hub-fe-strip__value">Turf</span>
-              </div>
-            </div>
-            <div className="app-tile-actions">
-              <Link className="button hub-fe-primary" href="/football-era">
-                View app page
-              </Link>
-              <Link className="button hub-fe-secondary" href="/football-era">
-                Features
-              </Link>
-            </div>
-          </article>
-        </section>
+        <div id="about">
+          <StudioAboutSection />
+        </div>
+
+        <StudioSiteFooter year={year} />
       </main>
     </div>
   );

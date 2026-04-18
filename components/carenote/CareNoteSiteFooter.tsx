@@ -2,13 +2,13 @@ import Link from "next/link";
 import { careNoteConfig } from "@/lib/siteConfig";
 
 const footerLinks = [
-  { href: "/carenote-cna", label: "Home" },
-  { href: "/carenote-cna/features", label: "Features" },
-  { href: "/carenote-cna/how-it-works", label: "How It Works" },
-  { href: "/carenote-cna/support", label: "Support" },
-  { href: "/carenote-cna/download", label: "Download" },
-  { href: "/carenote-cna/privacy", label: "Privacy" },
-  { href: "/carenote-cna/contact", label: "Contact" },
+  { href: "/carenote-cna/", label: "Home" },
+  { href: "/carenote-cna/features/", label: "Features" },
+  { href: "/carenote-cna/how-it-works/", label: "How It Works" },
+  { href: "/carenote-cna/support/", label: "Support" },
+  { href: "/carenote-cna/download/", label: "Download" },
+  { href: "/carenote-cna/privacy/", label: "Privacy" },
+  { href: "/carenote-cna/contact/", label: "Contact" },
 ] as const;
 
 export function CareNoteSiteFooter() {

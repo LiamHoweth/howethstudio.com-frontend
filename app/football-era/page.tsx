@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Football Era by Howeth Studio — become the greatest football player ever. Career slots, seasons, and legacy on iPhone.",
   alternates: {
-    canonical: "/football-era",
+    canonical: "/football-era/",
   },
 };
 
@@ -76,7 +76,7 @@ export default function FootballEraPage() {
                   <h3>Welcome back</h3>
                   <div className="screen-block">
                     <div className="screen-row">
-                      <strong>Active slot</strong>
+                      <strong>Active slot</strong>{" "}
                       <span>Slot 1</span>
                     </div>
                     <div className="screen-row">
@@ -269,16 +269,16 @@ export default function FootballEraPage() {
                 <a className={storeClass} href={storeHref}>
                   View on the App Store
                 </a>
-                <Link className="button button-ghost" href="/carenote-cna">
+                <Link className="button button-ghost" href="/carenote-cna/">
                   See CareNote CNA
                 </Link>
               </div>
               <p className="hero-copy fe-footnote-links">
-                <Link href="/football-era/privacy">Privacy</Link>
+                <Link href="/football-era/privacy/">Privacy</Link>
                 <span aria-hidden="true"> · </span>
-                <Link href="/football-era/support">Support</Link>
+                <Link href="/football-era/support/">Support</Link>
                 <span aria-hidden="true"> · </span>
-                <Link href="/football-era/app-store">App Store copy</Link>
+                <Link href="/football-era/app-store/">App Store copy</Link>
               </p>
             </article>
           </section>

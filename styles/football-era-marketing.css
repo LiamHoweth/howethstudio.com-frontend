@@ -1,9 +1,9 @@
 /**
- * Football Era marketing surface — colors aligned with src/ui/themePalettes.ts (dark base).
- * html.fe-active toggles body chrome while this layout is mounted.
+ * Football Era marketing — dark stadium colorway.
+ * Scope uses body:has(.fe-page-root) so SSR/first paint match hydration (no client-only html class).
  */
 
-html.fe-active body {
+body:has(.fe-page-root) {
   margin: 0;
   color: #f2f6ff;
   background:
@@ -13,41 +13,49 @@ html.fe-active body {
     linear-gradient(185deg, #070b14 0%, #0e1627 42%, #070b14 100%);
 }
 
-html.fe-active body::before,
-html.fe-active body::after {
+body:has(.fe-page-root)::before,
+body:has(.fe-page-root)::after {
   opacity: 0.45;
   filter: blur(12px);
 }
 
-html.fe-active body::before {
+body:has(.fe-page-root)::before {
   background: rgba(31, 139, 83, 0.22);
 }
 
-html.fe-active body::after {
+body:has(.fe-page-root)::after {
   background: rgba(212, 175, 55, 0.1);
 }
 
-html.fe-active .studio-header {
-  background: rgba(7, 11, 20, 0.82);
-  border-bottom-color: rgba(42, 63, 103, 0.85);
+body:has(.fe-page-root) .studio-header {
+  background: rgba(7, 11, 20, 0.88);
+  border-bottom-color: rgba(42, 63, 103, 0.72);
   backdrop-filter: blur(18px);
 }
 
-html.fe-active .studio-brand strong {
+body:has(.fe-page-root) .studio-brand-wordmark {
   color: #f2f6ff;
 }
 
-html.fe-active .studio-brand span {
-  color: #c9d8ee;
+body:has(.fe-page-root) .studio-brand-wordmark-light {
+  color: #b8c8e4;
 }
 
-html.fe-active .studio-nav a {
+body:has(.fe-page-root) .studio-brand-tagline {
+  color: rgba(201, 216, 238, 0.5);
+}
+
+body:has(.fe-page-root) .studio-nav a {
   color: #dce6f5;
 }
 
-html.fe-active .studio-nav a:hover {
+body:has(.fe-page-root) .studio-nav a:hover {
   background: rgba(31, 139, 83, 0.28);
   color: #ffffff;
+}
+
+body:has(.fe-page-root) .studio-nav-divider {
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .fe-page-root {
@@ -332,6 +340,7 @@ html.fe-active .studio-nav a:hover {
 
 .fe-page-root .screen-row {
   color: #d0ddf0;
+  gap: 12px;
 }
 
 .fe-page-root .screen-row strong {

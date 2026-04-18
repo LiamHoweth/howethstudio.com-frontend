@@ -5,6 +5,13 @@ function cleanUrl(value: string | undefined): string {
 export const siteUrl =
   cleanUrl(process.env.NEXT_PUBLIC_SITE_URL) || "https://howethstudio.com";
 
+/** Shown on Howeth Studio marketing pages (home footer, /contact/, etc.). */
+export const howethStudioConfig = {
+  contactEmail:
+    cleanUrl(process.env.NEXT_PUBLIC_HOWETH_STUDIO_CONTACT_EMAIL) ||
+    "howethstudio@gmail.com",
+};
+
 export const careNoteConfig = {
   siteName: "CareNote CNA",
   supportEmail:

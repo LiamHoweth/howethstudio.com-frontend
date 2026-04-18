@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Promotional text, subtitle, description, and keyword ideas for Football Era in App Store Connect, maintained by Howeth Studio.",
   alternates: {
-    canonical: "/football-era/app-store",
+    canonical: "/football-era/app-store/",
   },
 };
 
@@ -51,13 +51,13 @@ export default function FootballEraAppStorePage() {
               match your shipping build and store guidelines.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/football-era/privacy">
+              <Link className="button button-primary" href="/football-era/privacy/">
                 Privacy Policy URL
               </Link>
-              <Link className="button button-secondary" href="/football-era/support">
+              <Link className="button button-secondary" href="/football-era/support/">
                 Support URL
               </Link>
-              <Link className="button button-ghost" href="/football-era">
+              <Link className="button button-ghost" href="/football-era/">
                 Product page
               </Link>
             </div>

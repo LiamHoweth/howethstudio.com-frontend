@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "See the CareNote CNA workflow from resident selection to final saved note, including optional dictation, AI-assisted extraction, and review before save.",
   alternates: {
-    canonical: "/carenote-cna/how-it-works",
+    canonical: "/carenote-cna/how-it-works/",
   },
 };
 

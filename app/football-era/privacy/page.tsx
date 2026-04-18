@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "How Football Era handles information on your iPhone—local career data, optional Apple platform services, and how to contact Howeth Studio.",
   alternates: {
-    canonical: "/football-era/privacy",
+    canonical: "/football-era/privacy/",
   },
 };
 
@@ -126,10 +126,10 @@ export default function FootballEraPrivacyPage() {
           <section className="section section-card">
             <h2>Related links</h2>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/football-era/support">
+              <Link className="button button-primary" href="/football-era/support/">
                 Support
               </Link>
-              <Link className="button button-secondary" href="/football-era">
+              <Link className="button button-secondary" href="/football-era/">
                 Football Era home
               </Link>
             </div>

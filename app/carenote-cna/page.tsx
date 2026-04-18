@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "CareNote CNA helps CNAs document shift notes faster on iPhone with structured charting, optional voice capture, and editable smart note suggestions.",
   alternates: {
-    canonical: "/carenote-cna",
+    canonical: "/carenote-cna/",
   },
 };
 
@@ -35,7 +35,7 @@ export default function CareNoteHomePage() {
                 <a className={storePrimaryClass} href={appStoreHref}>
                   Download on the App Store
                 </a>
-                <Link className="button button-secondary" href="/carenote-cna/features">
+                <Link className="button button-secondary" href="/carenote-cna/features/">
                   See Features
                 </Link>
               </div>
@@ -291,7 +291,7 @@ export default function CareNoteHomePage() {
               <a className={storePrimaryClass} href={appStoreHref}>
                 Download App
               </a>
-              <Link className="button button-ghost" href="/carenote-cna/support">
+              <Link className="button button-ghost" href="/carenote-cna/support/">
                 Support
               </Link>
             </div>

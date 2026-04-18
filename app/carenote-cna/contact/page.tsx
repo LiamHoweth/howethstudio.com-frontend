@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Contact CareNote CNA for app support, launch questions, beta access, or website inquiries.",
   alternates: {
-    canonical: "/carenote-cna/contact",
+    canonical: "/carenote-cna/contact/",
   },
 };
 

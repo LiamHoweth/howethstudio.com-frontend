@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Sora } from "next/font/google";
+import { IBM_Plex_Mono, Manrope, Sora } from "next/font/google";
 import "@/styles/carenote-marketing.css";
 import "./globals.css";
 
@@ -17,6 +17,13 @@ const sora = Sora({
   display: "swap",
 });
 
+const studioMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-studio-mono",
+  display: "swap",
+});
+
 const metadataBase = new URL(
   process.env.NEXT_PUBLIC_SITE_URL || "https://howethstudio.com"
 );
@@ -28,9 +35,9 @@ export const metadata: Metadata = {
     template: "%s | Howeth Studio",
   },
   description:
-    "Howeth Studio builds focused iPhone apps including CareNote CNA and Football Era.",
+    "Howeth Studio — independent software development: product engineering, mobile-first delivery, and shipped apps including CareNote CNA and Football Era.",
   icons: {
-    icon: "/carenote-cna/assets/brand.png",
+    icon: [{ url: "/studio/favicon.svg", type: "image/svg+xml" }],
   },
   openGraph: {
     type: "website",
@@ -44,7 +51,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${sora.variable}`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${sora.variable} ${studioMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

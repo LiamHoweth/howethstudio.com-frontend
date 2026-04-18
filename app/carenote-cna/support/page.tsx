@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Get help with CareNote CNA, find setup guidance, troubleshooting steps, and direct support contact details for the app.",
   alternates: {
-    canonical: "/carenote-cna/support",
+    canonical: "/carenote-cna/support/",
   },
 };
 
@@ -112,10 +112,10 @@ export default function CareNoteSupportPage() {
             questions about how the app works.
           </p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/carenote-cna/contact">
+            <Link className="button button-primary" href="/carenote-cna/contact/">
               Open Contact Form
             </Link>
-            <Link className="button button-secondary" href="/carenote-cna/privacy">
+            <Link className="button button-secondary" href="/carenote-cna/privacy/">
               Read Privacy Policy
             </Link>
           </div>

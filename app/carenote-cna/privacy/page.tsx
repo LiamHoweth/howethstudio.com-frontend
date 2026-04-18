@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Read the CareNote CNA privacy policy covering local data storage, AI-assisted note features, third-party processing, and support contact information.",
   alternates: {
-    canonical: "/carenote-cna/privacy",
+    canonical: "/carenote-cna/privacy/",
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Download CareNote CNA for iPhone, learn what to expect from the app, and get support if you need help getting started.",
   alternates: {
-    canonical: "/carenote-cna/download",
+    canonical: "/carenote-cna/download/",
   },
 };
 
@@ -41,7 +41,7 @@ export default function CareNoteDownloadPage() {
               <a className={storeClass} href={appStoreHref}>
                 Download on the App Store
               </a>
-              <Link className="button button-secondary" href="/carenote-cna/support">
+              <Link className="button button-secondary" href="/carenote-cna/support/">
                 Get Support
               </Link>
             </div>
@@ -53,7 +53,7 @@ export default function CareNoteDownloadPage() {
               structured documentation, and a simpler review flow before saving.
             </p>
             <div className="download-actions">
-              <Link className="button button-ghost" href="/carenote-cna/how-it-works">
+              <Link className="button button-ghost" href="/carenote-cna/how-it-works/">
                 See How It Works
               </Link>
             </div>
@@ -87,10 +87,10 @@ export default function CareNoteDownloadPage() {
               email.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/carenote-cna/support">
+              <Link className="button button-primary" href="/carenote-cna/support/">
                 Support
               </Link>
-              <Link className="button button-ghost" href="/carenote-cna/contact">
+              <Link className="button button-ghost" href="/carenote-cna/contact/">
                 Contact Us
               </Link>
             </div>

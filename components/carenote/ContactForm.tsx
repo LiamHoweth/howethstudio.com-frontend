@@ -119,7 +119,7 @@ export function ContactForm() {
         <button className="button button-primary" type="submit">
           Send message
         </button>
-        <Link className="button button-secondary" href="/carenote-cna/support">
+        <Link className="button button-secondary" href="/carenote-cna/support/">
           Read FAQs
         </Link>
       </div>
