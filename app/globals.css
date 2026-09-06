@@ -319,6 +319,13 @@ body:has(.studio-landing)::after {
   color: #e8edf7;
 }
 
+.studio-piece--elevenward {
+  grid-column: 1 / -1;
+  background: linear-gradient(145deg, #16362b 0%, #10261e 60%, #0b1b16 100%);
+  border-color: rgba(214, 255, 83, 0.25);
+  color: #f4f7e9;
+}
+
 .studio-piece__index {
   align-self: start;
   padding-top: 4px;
@@ -329,6 +336,10 @@ body:has(.studio-landing)::after {
   color: rgba(232, 237, 247, 0.35);
 }
 
+.studio-piece--elevenward .studio-piece__index {
+  color: rgba(214, 255, 83, 0.5);
+}
+
 .studio-piece__kind {
   margin: 0 0 8px;
   color: rgba(12, 12, 12, 0.45);
@@ -337,6 +348,10 @@ body:has(.studio-landing)::after {
 
 .studio-piece--football .studio-piece__kind {
   color: rgba(232, 237, 247, 0.5);
+}
+
+.studio-piece--elevenward .studio-piece__kind {
+  color: rgba(214, 255, 83, 0.72);
 }
 
 .studio-piece__name {
@@ -351,6 +366,10 @@ body:has(.studio-landing)::after {
   color: #f7f9ff;
 }
 
+.studio-piece--elevenward .studio-piece__name {
+  color: #d6ff53;
+}
+
 .studio-piece__copy {
   margin: 0 0 18px;
   font-size: 0.98rem;
@@ -361,6 +380,10 @@ body:has(.studio-landing)::after {
 
 .studio-piece--football .studio-piece__copy {
   color: rgba(216, 228, 244, 0.88);
+}
+
+.studio-piece--elevenward .studio-piece__copy {
+  color: rgba(244, 247, 233, 0.86);
 }
 
 .studio-piece__bullets {
@@ -375,6 +398,10 @@ body:has(.studio-landing)::after {
 
 .studio-piece--football .studio-piece__bullets {
   color: rgba(180, 196, 220, 0.85);
+}
+
+.studio-piece--elevenward .studio-piece__bullets {
+  color: rgba(214, 255, 83, 0.78);
 }
 
 .studio-piece__bullets li {

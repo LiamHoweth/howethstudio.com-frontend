@@ -10,6 +10,10 @@ export const howethStudioConfig = {
   contactEmail:
     cleanUrl(process.env.NEXT_PUBLIC_HOWETH_STUDIO_CONTACT_EMAIL) ||
     "howethstudio@gmail.com",
+  // Elevenward is a product area of the studio site, not a separate web
+  // property. Keeping this as a root-relative path also prevents preview or
+  // environment variables from accidentally sending visitors off-domain.
+  elevenwardSiteUrl: "/elevenward/",
 };
 
 export const careNoteConfig = {

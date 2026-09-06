@@ -5,6 +5,7 @@ import {
   postgres,
   preserve,
   project,
+  ref,
   service,
   volume,
 } from "railway/iac";
@@ -18,6 +19,7 @@ export default defineRailway(() => {
     sizeMB: 500,
   });
   const PostgresPITR = bucket("Postgres-PITR", { region: "sjc" });
+  const elevenwardContent = bucket("elevenward-content", { region: "sjc" });
   const howethStudioWeb = service("howeth-studio-web", {
     source: github("LiamHoweth/howeth-studio-web"),
     build: "npm ci && npm run build",
@@ -52,6 +54,17 @@ export default defineRailway(() => {
       GOOGLE_OAUTH_CLIENT_IDS: preserve(),
       LEGACY_LEADERBOARDS_ENABLED: preserve(),
       TRUST_PROXY: preserve(),
+      ELEVENWARD_APPLE_CLIENT_ID: preserve(),
+      ELEVENWARD_GOOGLE_OAUTH_CLIENT_IDS: preserve(),
+      REVENUECAT_WEBHOOK_SECRET: preserve(),
+      ELEVENWARD_CONTENT_SIGNING_PRIVATE_KEY: preserve(),
+      ELEVENWARD_CONTENT_BUCKET: ref(elevenwardContent, "BUCKET"),
+      ELEVENWARD_CONTENT_ENDPOINT: ref(elevenwardContent, "ENDPOINT"),
+      ELEVENWARD_CONTENT_REGION: ref(elevenwardContent, "REGION"),
+      ELEVENWARD_CONTENT_ACCESS_KEY_ID: ref(elevenwardContent, "ACCESS_KEY_ID"),
+      ELEVENWARD_CONTENT_SECRET_ACCESS_KEY: ref(elevenwardContent, "SECRET_ACCESS_KEY"),
+      ELEVENWARD_CONTENT_FORCE_PATH_STYLE: "false",
+      ELEVENWARD_CONTENT_PUBLIC_BASE_URL: "https://api.howethstudio.com/v1/elevenward/content/objects",
     },
   });
 
@@ -62,6 +75,7 @@ export default defineRailway(() => {
       footballEraApi,
       footballEraPostgresData,
       PostgresPITR,
+      elevenwardContent,
     ],
   });
 });

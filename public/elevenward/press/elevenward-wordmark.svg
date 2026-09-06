@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Elevenward wordmark</title>
+  <desc id="desc">Elevenward name beside an upward football-pitch arrow.</desc>
+  <rect width="1200" height="320" rx="52" fill="#08160f"/>
+  <g transform="translate(76 66)">
+    <rect width="188" height="188" rx="46" fill="#b7f36b"/>
+    <path d="M48 135 135 48M83 48h52v52" fill="none" stroke="#08160f" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="58" cy="132" r="12" fill="#08160f"/>
+  </g>
+  <text x="306" y="195" fill="#f5f1e7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="112" font-weight="800" letter-spacing="-4">Elevenward</text>
+  <text x="313" y="240" fill="#91a397" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="25" font-weight="650" letter-spacing="5">THE WORK BEFORE THE NOISE</text>
+</svg>
