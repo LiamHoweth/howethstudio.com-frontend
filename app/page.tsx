@@ -10,7 +10,7 @@ import { StudioSiteHeader } from "@/components/studio/StudioSiteHeader";
 export const metadata: Metadata = {
   title: "Howeth Studio",
   description:
-    "Independent software studio: product engineering, APIs and clients, and polished mobile experiences — CareNote CNA, Football Era, and selective new work.",
+    "Independent software studio: product engineering, APIs and polished mobile experiences — CareNote CNA, Football Era, Elevenward, and selective new work.",
   alternates: {
     canonical: "/",
   },

@@ -95,6 +95,38 @@ export function StudioWorkSection() {
             </div>
           </div>
         </li>
+
+        <li className="studio-piece studio-piece--elevenward">
+          <span className="studio-mono studio-piece__index">03</span>
+          <div className="studio-piece__body">
+            <p className="studio-mono studio-piece__kind">Product · Games</p>
+            <h3 className="studio-piece__name">Elevenward</h3>
+            <p className="studio-piece__copy">
+              A portrait-first football career and life RPG for iOS and Android —
+              following one player from academy hopeful to retirement across an original,
+              living football world.
+            </p>
+            <ul className="studio-piece__bullets studio-mono">
+              <li>iOS + Android</li>
+              <li>Offline-first careers</li>
+              <li>No ads or pay-to-win</li>
+            </ul>
+            <div className="studio-piece__actions">
+              <Link
+                className="studio-cta studio-cta--on-dark"
+                href={howethStudioConfig.elevenwardSiteUrl}
+              >
+                Visit Elevenward
+              </Link>
+              <a
+                className="studio-cta studio-cta--ghost"
+                href={`mailto:${howethStudioConfig.contactEmail}?subject=Elevenward%20early%20access`}
+              >
+                Join early access
+              </a>
+            </div>
+          </div>
+        </li>
       </ol>
     </section>
   );

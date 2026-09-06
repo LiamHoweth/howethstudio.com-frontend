@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HowethStudioBrand } from "@/components/studio/HowethStudioBrand";
+import { howethStudioConfig } from "@/lib/siteConfig";
 
 export function StudioSiteHeader() {
   return (
@@ -13,6 +14,7 @@ export function StudioSiteHeader() {
           <span className="studio-nav-divider" aria-hidden="true" />
           <Link href="/carenote-cna/">CareNote CNA</Link>
           <Link href="/football-era/">Football Era</Link>
+          <Link href={howethStudioConfig.elevenwardSiteUrl}>Elevenward</Link>
         </nav>
       </div>
     </header>
